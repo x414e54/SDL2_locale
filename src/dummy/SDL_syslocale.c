@@ -5,13 +5,13 @@
 char *
 LOC_GetCountryCode()
 {
-	return NULL;
+    return NULL;
 }
 
 char **
 LOC_GetLanguageList()
 {
-	return NULL;
+    return NULL;
 }
 
 #endif /* SDL_FILESYSTEM_DUMMY */
