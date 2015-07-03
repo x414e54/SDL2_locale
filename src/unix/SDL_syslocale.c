@@ -43,7 +43,12 @@ LOC_GetCountryCode()
 {
     char* default_locale = NULL;
     
-    const char* lang = SDL_getenv("LANG");
+    const char* lang = SDL_getenv("LC_MONETARY");
+
+    if (lang == NULL || strlen(lang) == 0) 
+    {
+        lang = SDL_getenv("LANG");
+    }
 
     if (lang != NULL)
     {
