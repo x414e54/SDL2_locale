@@ -102,7 +102,7 @@ LOC_GetLanguageList()
     if (num_languages == 0) {
         tmp = SDL_getenv("LANG");
         if (tmp != NULL) {
-            languages = SDL_malloc((num_languages + 1) * sizeof(char*));
+            languages = SDL_malloc(2 * sizeof(char*));
             
             size_t length = find_end(tmp, '_') - tmp;
             char *language = duplicate(tmp, length);
